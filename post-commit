@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+# An example hook script to prepare a packed repository for use over
+# dumb transports.
+#
+# To enable this hook, rename this file to "post-update".
+
+echo "Taking a break!"
+osascript <<EOD
+    tell application "Time Out Free" to activate
+    tell application "System Events"
+        keystroke "n" using command down
+    end tell
+EOD
